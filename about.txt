@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Serif Tamil
+- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tamil)
+- Font Source: http://fonts.gstatic.com/s/notoseriftamil/v28/LYjndHr-klIgTfc40komjQ5OObazYp-6H94dBF-RX6nNRJfi-Gf55IgAecattN-R8Pz3v8Etew.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

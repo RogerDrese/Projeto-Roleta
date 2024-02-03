@@ -2,8 +2,8 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkred;
-    margin: 0;
+    background-color: gold;
+    
 
 }
 header{
@@ -24,16 +24,32 @@ nav > a {
     color: goldenrod;
     font-weight: bold;
     margin-right: 30px;
+    border-color: rgba(255, 235, 205, 0);
 }
-main{
-    padding: 10px;
-    margin: 10px;
+nav a:hover {
+    border: 2px solid rgba(253, 6, 6, 0.192);
+    border-radius: 8%;
+    transform: (-5px, -5px);
+    box-shadow: 7px 7px 15px black;
+    transition: 1s, border 1s;
 
 }
-article > aside{
-    background-color: darkgreen;
-    border-radius: 10px;
+main {
+    padding: 10px;
+    margin: 145px;
+
+}
+article{
+    text-align: center;
+    text-decoration: underline solid;
+    text-shadow: 3px 3px 10px rgba(224, 217, 175, 0.952);
+
+
+    background: url(Imagens/cassino-fundo.jpeg) no-repeat;
+    height: 1024px;
+    width: 1024px;
     
+
 }
 footer{
     background-color: darkgreen;
