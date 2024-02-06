@@ -40,7 +40,8 @@ path {
 .box5,
 .box6,
 .box7,
-.box8 {
+.box8,
+.box9 {
     position: absolute;
     width: 0;
     height: 0;
@@ -109,6 +110,7 @@ path {
     border-left: 150px solid transparent;
     top: 50%;
 }
+
 
 @keyframes roleta {
     0% {
