@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Wheel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .roulette-container {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            border: 2px solid black;
+            position: relative;
+            overflow: hidden;
+            margin: 50px auto;
+            transition: transform 3s ease-in-out; /* Transição suave de rotação */
+        }
+        
+        .slice {
+            width: 10px; /* Tamanho menor para as fatias */
+            height: 300px; /* Altura mantida para todas as fatias */
+            position: absolute;
+            left: 50%;
+            transform-origin: center left; /* Origem da transformação */
+        }
+
+        .slice:nth-child(even) {
+            background-color: black; /* Cores para os números pares */
+        }
+
+        .slice:nth-child(odd) {
+            background-color: red; /* Cores para os números ímpares */
+        }
+
+        .number {
+            position: absolute;
+            bottom: 10px; /* Ajusta a posição do número */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        #spinButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="roulette-container" id="roulette">
+        <!-- Números e fatias serão adicionados aqui via JavaScript -->
+    </div>
+    <button id="spinButton">Girar</button>
+
+    <script>
+        // Números na roleta
+        const numbers = [
+            '0', '32', '15', '19', '4', '21', '2', '25', '17', '34', '6', '27',
+            '13', '36', '11', '30', '8', '23', '10', '5', '24', '16', '33', '1',
+            '20', '14', '31', '9', '22', '18', '29', '7', '28', '12', '35', '3', '26'
+        ];
+
+        const roulette = document.getElementById('roulette');
+        const angle = 360 / numbers.length;
+        let currentAngle = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            const slice = document.createElement('div');
+            slice.classList.add('slice');
+            slice.style.transform = `rotate(${angle * i}deg) translateX(-50%)`;
+            roulette.appendChild(slice); // Adiciona a fatia à roleta
+
+            const number = document.createElement('div');
+            number.classList.add('number');
+            number.textContent = numbers[i];
+            slice.appendChild(number); // Adiciona o número à fatia
+        }
+
+        // Adiciona evento de clique para girar a roleta
+        document.getElementById('spinButton').addEventListener('click', () => {
+            const randomAngle = Math.floor(Math.random() * 3600) + 360;
+            currentAngle += randomAngle;
+            roulette.style.transform = `rotate(${currentAngle}deg)`;
+        });
+    </script>
+</body>
+</html>
