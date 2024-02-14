@@ -51,7 +51,7 @@ main {
 article{
     text-align: center;
     text-decoration: underline solid;
-    text-shadow: 3px 3px 10px rgba(224, 217, 175, 0.952);
+    text-shadow: 3px 3px 10px rgba(34, 34, 34, 0.952);
 
 }
 footer{
